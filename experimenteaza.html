@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Testează - Coroziune</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Simulare Coroziune</h1>
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="teorie.html">Teorie</a>
+      <a href="experimenteaza.html" class="active">Testează</a>
+    </nav>
+  </header>
+
+  <main class="layout-3col">
+    <aside class="left-panel">
+      <h3>Alege metalul</h3>
+      <button onclick="selectMetal('Fe')">🧲 Fier (Fe)</button>
+      <button onclick="selectMetal('Zn')">🧲 Zinc (Zn)</button>
+      <button onclick="selectMetal('Al')">🧲 Aluminiu (Al)</button>
+      <button onclick="selectMetal('Mg')">🧲 Magneziu (Mg)</button>
+      <button onclick="selectMetal('Sn')">🧲 Staniu (Sn)</button>
+      <button onclick="selectMetal('Ni')">🧲 Nichel (Ni)</button>
+    </aside>
+  
+    <section class="lab-image-container">
+      <img src="chemix.jpg" alt="Setup experimental" class="background-img">
+      <div id="metal-label" class="metal-label"></div>
+      <div class="multimetru-display">
+        <input type="text" id="displayEm" readonly value="0.00  ">
+      </div>
+    </section>
+  
+    <aside class="right-panel">
+      <h3>Alege mediul</h3>
+      <select id="mediu" onchange="checkReady()">
+        <option value="">-- selectează --</option>
+        <option value="acid">Acid (H₂SO₄)</option>
+        <option value="neutru">Neutru (NaCl)</option>
+        <option value="bazic">Bazic (NaOH)</option>
+      </select>
+  
+      <h3 style="margin-top: 30px;">E măsurat (V)</h3>
+      <input type="number" id="em" placeholder="ex: 0.32" step="0.01" oninput="checkReady()">
+      <div id="errorMsg" class="error-message"></div>
+
+  
+      <button id="simuleazaBtn" onclick="simuleaza()" disabled>🔬 Simulează</button>
+      <button id="resetBtn" onclick="reseteaza()" style="margin-top: 10px;">🔄 Resetează</button>
+
+
+    </aside>
+  </main>
+  
+  
+  <section class="results">
+    <h2>Rezultatele calculului</h2>
+    <div class="rezultat" id="rezultatBox"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>ε<sub>cor</sub> (V)</th>
+          <th>η<sub>a</sub> (V)</th>
+          <th>η<sub>c</sub> (V)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="epsilon_cor">-</td>
+          <td id="eta_a">-</td>
+          <td id="eta_c">-</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 Copyright | Anghel Delia-Maria, Ichim Raluca, Mincă Maria-Alexandra, studente la "Facultatea de Automatică și Calculatoare"
+
+      Universitatea Națională de Știință și Tehnologie Politehnica București - Sesiunea de Comunicări Științifice | Mai 2025</p>
+  </footer>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

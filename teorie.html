@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Teorie - Coroziune</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Teoria Coroziunii</h1>
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="teorie.html" class="active">Teorie</a>
+      <a href="experimenteaza.html">Testează</a>
+    </nav>
+  </header>
+  <div class="center">
+    <a href="experimenteaza.html">
+      <button>💡 Simulează Coroziunea</button>
+    </a>
+  </div>
+
+  <main>
+
+    <section>
+      <h2>Electrozi și potențialul de coroziune</h2>
+      <p>
+        Electrodul este un sistem electroneutru format dintr-un metal și soluția de electrolit. În medii corozive,
+        reacțiile la interfața metal/soluție sunt ireversibile, generând spontan o diferență de potențial – potențialul
+        de coroziune (ε<sub>cor</sub>).</p>
+      <p>Se defineşte drept electrod sistemul electroneutru metal /soluţie de electrolit. Electrozii
+        pot fi reversibili şi ireversibili. Electrozii reversibili sunt caracterizaţi de reacţii de echilibru la
+        interfaţa metal/soluţie de electrolit. Când soluţia reprezintă un mediu coroziv, reacţiile la
+        interfaţa metal/soluţie de electrolit sunt ireversibile. Ca urmare a desfăşurării simultane a
+        proceselor de ionizare a metalului (procese anodice) şi a depolarizării, a reducerii agenţilor
+        corozivi din soluţia de electrolit (procese catodice) pe aceeaşi suprafaţă metalică, la interfaţa
+        metal/mediu coroziv apare spontan o diferenţă de potenţial, numită potenţial de coroziune.
+        Procesul global al coroziunii cu depolarizare de hidrogen/oxigen se obţine prin
+        însumarea algebrică a reacţiilor de ionizare a metalului (oxidare) şi a reacţiei de depolarizare
+        (reducere) a ionilor sau a moleculelor din mediul coroziv.</p>
+    </section>
+
+    <section>
+      <h2>Reacții chimice</h2>
+
+      <h3>1. Coroziune cu depolarizare de hidrogen</h3>
+
+      <strong>În medii acide:</strong>
+      <pre>
+Oxidare:        Fe → Fe²⁺ + 2e⁻
+Reducere:       2H⁺ + 2e⁻ → H₂
+Reacție globală: Fe + 2H⁺ → Fe²⁺ + H₂
+      </pre>
+
+      <strong>În medii neutre și alcaline:</strong>
+      <pre>
+Oxidare:        Fe → Fe²⁺ + 2e⁻
+Reducere:       2H₂O + 2e⁻ → 2OH⁻ + H₂
+Reacție globală: Fe + 2H₂O → Fe²⁺ + 2OH⁻ + H₂
+      </pre>
+
+      <h3>2. Coroziune cu depolarizare de oxigen</h3>
+
+      <strong>În medii acide:</strong>
+      <pre>
+Oxidare:        Fe → Fe²⁺ + 2e⁻
+Reducere:       2H⁺ + ½O₂ + 2e⁻ → H₂O
+Reacție globală: Fe + 2H⁺ + ½O₂ → Fe²⁺ + H₂O
+      </pre>
+
+      <strong>În medii neutre și alcaline:</strong>
+      <pre>
+Oxidare:        Fe → Fe²⁺ + 2e⁻
+Reducere:       H₂O + ½O₂ + 2e⁻ → 2OH⁻
+Reacție globală: Fe + H₂O + ½O₂ → Fe(OH)₂
+      </pre>
+    </section>
+
+    <section>
+      <h2>Formula potențialului de coroziune și a supratensiunii</h2>
+      <p> Potenţialul de coroziune şi supratensiunea depind de natura chimică şi starea suprafeţei
+        metalului, de natura chimică şi pH-ul mediului coroziv.</p>
+      <p>ε<sub>cor</sub> = E<sub>măsurat</sub> + 0.266 V</p>
+      <p>η<sub>a</sub> = ε<sub>cor</sub> - ε<sup>0</sup><sub>1</sub> (supratensiune anodică, unde ε<sup>0</sup><sub>1</sub> este potențialul standard al metalului)</p>
+      <p>η<sub>c</sub> = ε<sub>cor</sub> - ε<sup>0</sup><sub>2</sub> (supratensiune catodică, unde ε<sup>0</sup><sub>2</sub> este potențialul agentului oxidant din soluție)</p>
+    </section>
+
+    <section class="theory-section">
+      <h2>Aparatură și substanțe</h2>
+      <p><strong>Aparatură:</strong> instrument de măsură, cuve cu soluții, electrozi de fier, zinc, aluminiu.</p>
+      <p><strong>Substanțe:</strong> soluții de acid sulfuric, hidroxid de sodiu și clorură de sodiu.</p>
+    </section>
+    <section class="theory-section">
+      <h2>Modul de lucru</h2>
+      <ul>
+        <li>Se curăță plăcuțele metalice (electrozii) cu hârtie metalografică înaintea fiecărei măsurători.</li>
+        <li>Se alcătuiesc pile galvanice, în care un electrod este metalul introdus în mediul coroziv, iar celălalt este
+          electrodul de referință:</li>
+      </ul>
+
+      <pre>
+(-) M / H₂SO₄ // electrod de referință (+)
+(-) M / NaOH  // electrod de referință (+)
+(-) M / NaCl  // electrod de referință (+)
+  </pre>
+
+      <p>
+        Ca electrod de referință se poate folosi electrodul de Ag/AgCl, cu
+        ε<sup>0</sup><sub>Ag⁺/AgC</sub> = +0.266 V.
+      </p>
+      <p>
+        Electrodul de referință se conectează la bornele voltmetrului și se notează valoarea t.e.m. indicată de afișajul
+        electronic după două minute, când se consideră că a atins o valoare relativ constantă.
+      </p>
+    </section>
+
+    <section>
+      <h2>Valori standard ale potențialelor</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sistem</th>
+            <th>ε⁰ (V)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fe²⁺ / Fe</td>
+            <td>-0.44</td>
+          </tr>
+          <tr>
+            <td>Zn²⁺ / Zn</td>
+            <td>-0.763</td>
+          </tr>
+          <tr>
+            <td>Al³⁺ / Al</td>
+            <td>-1.66</td>
+          </tr>
+          <tr>
+            <td>Mg²⁺ / Mg</td>
+            <td>-2.37</td>
+          </tr>
+          <tr>
+            <td>Sn²⁺ / Sn</td>
+            <td>-0.14</td>
+          </tr>
+          <tr>
+            <td>Ni²⁺ / Ni</td>
+            <td>-0.25</td>
+          </tr>
+          <tr>
+            <td>H⁺ / H₂ (acid)</td>
+            <td>0.00</td>
+          </tr>
+          <tr>
+            <td>O₂ / OH⁻ (neutru/alcalin)</td>
+            <td>+0.401</td>
+          </tr>
+          <tr>
+            <td>Ag/AgCl (referință)</td>
+            <td>+0.266</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+
+    <p>&copy; 2025 Copyright | Anghel Delia-Maria, Ichim Raluca, Mincă Maria-Alexandra, studente la "Facultatea de
+      Automatică și Calculatoare"
+
+      Universitatea Națională de Știință și Tehnologie Politehnica București - Sesiunea de Comunicări Științifice | Mai
+      2025</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Acasă - Coroziune</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Determinarea Potențialului de Coroziune</h1>
+    <nav>
+      <a href="index.html" class="active">Acasă</a>
+      <a href="teorie.html">Teorie</a>
+      <a href="experimenteaza.html">Testează</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Principiul lucrării</h2>
+      <p>Coroziunea reprezintă distrugerea fizico-chimică, spontană, ireversibilă şi de nedorit a 
+metalelor şi aliajelor sub acţiunea chimică, electrochimică sau biologică a mediului 
+înconjurător.</p>
+      <p>Procesele de coroziune depind de natura metalului şi a mediului coroziv, de condiţiile 
+de presiune şi temperatură, de condiţiile statice sau dinamice ale mediului coroziv. </p>
+    </section>
+
+    <section>
+      <h2>Scopul lucrării</h2>
+      <p>Se determină potențialul de coroziune și se calculează supratensiunile anodice și catodice pentru metalele Fe, Zn și Al în trei tipuri de medii: acid (H₂SO₄), bazic (NaOH) și neutru (NaCl).</p>
+      <p> În general, în mediul acid are loc coroziunea cu depolarizare de hidrogen, iar în mediul 
+neutru şi alcalin are loc coroziunea cu depolarizare de oxigen.</p>
+    </section>
+
+  
+    <section>
+      <h2>Formula pentru supratensiune</h2>
+      <p>ε<sub>cor</sub> = E<sub>măsurat</sub> + 0.266 V</p>
+      <p>η<sub>a</sub> = ε<sub>cor</sub> - ε<sup>0</sup><sub>1</sub></p>
+      <p>η<sub>c</sub> = ε<sub>cor</sub> -ε<sup>0</sup><sub>2</sub></p>
+    </section>
+
+  </main>
+
+  <footer>
+   
+    <p>&copy; 2025 Copyright | Anghel Delia-Maria, Ichim Raluca, Mincă Maria-Alexandra, studente la "Facultatea de Automatică și Calculatoare"
+
+      Universitatea Națională de Știință și Tehnologie Politehnica București - Sesiunea de Comunicări Științifice | Mai 2025</p>
+  </footer>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+  
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  
+</body>
+</html>
